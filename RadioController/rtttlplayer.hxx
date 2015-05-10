@@ -14,7 +14,7 @@ struct Note {
     unsigned int frequency;
     unsigned int duration;
 };
-255
+
 class RTTTLPlayer : public QObject
 {
     Q_OBJECT
