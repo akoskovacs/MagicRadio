@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimedia
 
 unix: CONFIG += link_pkgconfig
 unix: PKGCONFIG += libusb
@@ -19,14 +19,19 @@ TEMPLATE = app
 SOURCES += main.cxx\
         mainwindow.cxx \
     opendevice.cxx \
-    rtttlplayer.cxx
+    rtttlplayer.cxx \
+    audiogenerator.cxx \
+    audiosettings.cxx
 
 HEADERS  += mainwindow.hxx \
     opendevice.h \
     rtttl_notes.hxx \
-    rtttlplayer.hxx
+    rtttlplayer.hxx \
+    audiogenerator.hxx \
+    audiosettings.hxx
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    audiosettings.ui
 
 win32: LIBS += -LC:/Users/akos/Downloads/libusb-win32-bin-1.2.6.0/libusb-win32-bin-1.2.6.0/lib/dynamic/gcc/ -lusb
 

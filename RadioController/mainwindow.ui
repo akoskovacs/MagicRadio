@@ -40,6 +40,9 @@
               </item>
               <item>
                <widget class="QSlider" name="ledPwmSlider">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
                 <property name="maximum">
                  <number>255</number>
                 </property>
@@ -279,6 +282,13 @@
            </widget>
           </item>
           <item>
+           <widget class="QCheckBox" name="simulationBox">
+            <property name="text">
+             <string>Szimulálás</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_4">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -321,7 +331,7 @@
      <x>0</x>
      <y>0</y>
      <width>402</width>
-     <height>21</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_Eszk_z">
@@ -338,8 +348,15 @@
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
+   <widget class="QMenu" name="menu_Ve_ll_t_sok">
+    <property name="title">
+     <string>&amp;Beállítások</string>
+    </property>
+    <addaction name="action_Sound"/>
+   </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Eszk_z"/>
+   <addaction name="menu_Ve_ll_t_sok"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="toolBar">
@@ -350,7 +367,7 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
   <action name="actionConnect">
@@ -369,6 +386,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Sound">
+   <property name="text">
+    <string>&amp;Hang</string>
    </property>
   </action>
  </widget>
